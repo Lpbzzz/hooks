@@ -7,7 +7,11 @@
   "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "patch": "npm version patch",
+    "minor": "npm version minor",
+    "major": "npm version major",
+    "publish": "pnpm run build && npm run patch && npm publish"
   },
   "files": [
     "dist"
